@@ -59,6 +59,8 @@ async function handleSubmit(e) {
   style={{
     display: "flex",
     justifyContent: "space-between",
+    flexWrap: "wrap",
+    gap: "10px",
     padding: "20px",
     borderBottom: "1px solid gray",
   }}
@@ -81,7 +83,7 @@ async function handleSubmit(e) {
 >
   <h1
     style={{
-      fontSize: "60px",
+      fontSize: "clamp(32px, 8vw, 60px)"
     }}
   >
     Nova Studio
@@ -166,12 +168,15 @@ We Build Modern Digital Experiences
         <h3>{project.title}</h3>
 
         <p>{project.category}</p>
-
         <img
-          src={project.image_url}
-          alt={project.title}
-          width="300"
-        />
+  	  src={project.image_url}
+  	  alt={project.title}
+  	  style={{
+   	    width: "100%",
+   	    maxWidth: "350px",
+   	    height: "auto",
+ 	 }}
+	/>
       </div>
     ))}
   </div>
@@ -183,14 +188,14 @@ We Build Modern Digital Experiences
 <section>
   <h2>Our Statistics</h2>
 
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "space-around",
-      flexWrap: "wrap",
-      marginTop: "20px",
-    }}
-  >
+     <div
+       style={{
+         display: "flex",
+         justifyContent: "center",
+         gap: "20px",
+         flexWrap: "wrap",
+       }}
+     >
     {stats.map((stat) => (
       <div
         key={stat.id}
@@ -219,7 +224,8 @@ We Build Modern Digital Experiences
       <input
         type="text"
         style={{
- 	  width: "500px",
+ 	  width: "100%",
+	  maxWidth: "500px",
  	  padding: "10px",
 	}}
         placeholder="Your Name"
@@ -234,7 +240,8 @@ We Build Modern Digital Experiences
       <input
         type="email"
         style={{
-  	  width: "300px",
+  	  width: "100%",
+	  maxWidth: "500px",
  	  padding: "10px",
         }}
         placeholder="Your Email"
@@ -248,7 +255,8 @@ We Build Modern Digital Experiences
     <div>
       <textarea
       style={{
- 	 width: "300px",
+ 	 width: "100%",
+	 maxWidth: "500px",
          height: "100px",
          padding: "10px",	
       }}
