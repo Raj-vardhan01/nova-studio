@@ -65,39 +65,36 @@ async function handleSubmit(e) {
   style={{
     display: "flex",
     justifyContent: "space-between",
+    alignItems: "center",
+    flexWrap: "wrap",
+    gap: "10px",
     padding: "20px",
-    backgroundColor: "#2563eb",
-    color: "white",
-    borderRadius: "10px",
-}}
+  }}
 >
-  <h2>Nova Studio</h2>
+  <h2
+  style={{
+    margin: 0,
+  }}
+>
+  Nova Studio
+</h2>
 
-  <div>
-    <a
-      href="#services"
-      style={{
-        color: "white",
-        textDecoration: "none",
-     }}
-   >Services</a>
-    {" | "}
-    <a
-      href="#portfolio"
-      style={{
-        color: "white",
-        textDecoration: "none",
-     }}
-   >Portfolio</a>
-    {" | "}
-    <a
-      href="#contact"
-      style={{
-        color: "white",
-        textDecoration: "none",
-     }}
-   >Contact</a>
-  </div>
+<div
+  style={{
+    display: "flex",
+    gap: "15px",
+    flexWrap: "wrap",
+      color: "black",
+       textDecoration: "none",
+  }}
+>
+  <a href="#services">Services</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#contact">Contact</a>
+</div>
+
+  
+    
 </nav>
         <section
  	  style={{
