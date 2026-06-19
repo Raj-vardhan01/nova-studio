@@ -54,33 +54,61 @@ async function handleSubmit(e) {
 }
 
   return (
-    <main style={{ padding: "40px" }}>
+    <main
+      style={{
+        padding: "40px",
+        backgroundColor: "#f5f7fa",
+        minHeight: "100vh",
+      }}
+    >
 <nav
   style={{
     display: "flex",
     justifyContent: "space-between",
-    flexWrap: "wrap",
-    gap: "10px",
     padding: "20px",
-    borderBottom: "1px solid gray",
-  }}
+    backgroundColor: "#2563eb",
+    color: "white",
+    borderRadius: "10px",
+}}
 >
   <h2>Nova Studio</h2>
 
   <div>
-    <a href="#services">Services</a>
+    <a
+      href="#services"
+      style={{
+        color: "white",
+        textDecoration: "none",
+     }}
+   >Services</a>
     {" | "}
-    <a href="#portfolio">Portfolio</a>
+    <a
+      href="#portfolio"
+      style={{
+        color: "white",
+        textDecoration: "none",
+     }}
+   >Portfolio</a>
     {" | "}
-    <a href="#contact">Contact</a>
+    <a
+      href="#contact"
+      style={{
+        color: "white",
+        textDecoration: "none",
+     }}
+   >Contact</a>
   </div>
 </nav>
         <section
-  style={{
-    textAlign: "center",
-    padding: "100px 20px",
-  }}
->
+ 	  style={{
+   	    textAlign: "center",
+   	    padding: "100px 20px",
+    	    backgroundColor: "#2563eb",
+   	    color: "white",
+            borderRadius: "15px",
+   	    marginTop: "20px",
+  	 }}
+       >
   <h1
     style={{
       fontSize: "clamp(32px, 8vw, 60px)"
@@ -92,7 +120,7 @@ async function handleSubmit(e) {
   <h2
   style={{
     fontSize: "20px",
-    color: "#555",
+    color: "white",
   }}
 >
 We Build Modern Digital Experiences
@@ -101,7 +129,7 @@ We Build Modern Digital Experiences
 <p
   style={{
     fontSize: "20px",
-    color: "#555",
+    color: "white",
   }}
 >
   Helping startups and businesses build
@@ -109,13 +137,17 @@ We Build Modern Digital Experiences
 </p>
 
   <a href="#contact">
-  <button
-    style={{
-      padding: "15px 30px",
-      fontSize: "18px",
-      cursor: "pointer",
-    }}
-  >
+    <button
+      style={{
+        padding: "15px 30px",
+        fontSize: "18px",
+        backgroundColor: "white",
+        color: "#2563eb",
+        border: "none",
+        borderRadius: "8px",
+        cursor: "pointer",
+     }}
+   >
     Start a Project
   </button>
 </a>
@@ -127,13 +159,13 @@ We Build Modern Digital Experiences
           <div
             key={service.id}
             style={{
-  	      border: "1px solid #ddd",
-  	      padding: "25px",
-  	      margin: "20px 0",
- 	      borderRadius: "15px",
- 	      boxShadow:
-                "0px 4px 10px rgba(0,0,0,0.1)",
-            }}
+ 	      backgroundColor: "white",
+  	      padding: "20px",
+	      margin: "15px",
+ 	      borderRadius: "12px",
+  	      boxShadow:
+   	        "0 2px 8px rgba(0,0,0,0.1)",
+ 	   }}
           >
             <h3>{service.title}</h3>
 
@@ -160,22 +192,24 @@ We Build Modern Digital Experiences
       <div
         key={project.id}
         style={{
-          border: "1px solid gray",
-          padding: "15px",
-          borderRadius: "10px",
-        }}
-      >
+          backgroundColor: "white",
+   	  padding: "20px",
+          borderRadius: "12px",
+          boxShadow:
+   	    "0 2px 8px rgba(0,0,0,0.1)",
+	}}	
+     >
         <h3>{project.title}</h3>
 
         <p>{project.category}</p>
         <img
-  	  src={project.image_url}
+          src={project.image_url}
   	  alt={project.title}
   	  style={{
-   	    width: "100%",
-   	    maxWidth: "350px",
-   	    height: "auto",
- 	 }}
+    	    width: "100%",
+    	    height: "auto",
+    	    borderRadius: "8px",
+  	  }}
 	/>
       </div>
     ))}
@@ -200,12 +234,13 @@ We Build Modern Digital Experiences
       <div
         key={stat.id}
         style={{
-          border: "1px solid gray",
-          padding: "20px",
-          borderRadius: "10px",
-          minWidth: "150px",
-          textAlign: "center",
-        }}
+  	  backgroundColor: "white",
+  	  padding: "20px",
+  	  margin: "15px 0",
+  	  borderRadius: "12px",
+  	  boxShadow:
+    	    "0 2px 8px rgba(0,0,0,0.1)",
+	}}
       >
         <h3>{stat.value}+</h3>
         <p>{stat.label}</p>
@@ -216,7 +251,12 @@ We Build Modern Digital Experiences
 
 <hr style={{ margin: "40px 0" }} />
 
-<section id="contact">
+<section
+  id="contact"
+  style={{
+    textAlign: "center",
+  }}
+>
   <h2>Contact Us</h2>
 
   <form onSubmit={handleSubmit}>
@@ -270,12 +310,14 @@ We Build Modern Digital Experiences
 
     <button
   type="submit"
-  style={{
-    padding: "15px 30px",
-    fontSize: "18px",
-    cursor: "pointer",
+    style={{
+    padding: "12px 25px",
+    backgroundColor: "#2563eb",
+    color: "white",
+    border: "none",
     borderRadius: "8px",
-  }}
+    cursor: "pointer",
+ }}
 >
   Submit
 </button>
