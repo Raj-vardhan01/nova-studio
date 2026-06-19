@@ -120,7 +120,7 @@ async function handleSubmit(e) {
   <h2
   style={{
     fontSize: "20px",
-    color: "white",
+    color: "#f5f5f5",
   }}
 >
 We Build Modern Digital Experiences
@@ -129,7 +129,7 @@ We Build Modern Digital Experiences
 <p
   style={{
     fontSize: "20px",
-    color: "white",
+    color: "#f5f5f5",
   }}
 >
   Helping startups and businesses build
